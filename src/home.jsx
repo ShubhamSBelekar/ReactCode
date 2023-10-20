@@ -53,7 +53,6 @@ const handleFormSubmit = async (e) => {
                 ,body:JSON.stringify(Data)
             }).then((response)=>response.json())
             .then((response)=>{
-            console.log(response);
             if(response[0].result=="1"){
                 localStorage.setItem('app-token', response[0].token);
                 setMsg("Logged In Successfully! Redirecting......");
